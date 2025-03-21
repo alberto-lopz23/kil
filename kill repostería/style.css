@@ -1,0 +1,245 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #e64a6f; /* Rosa oscuro */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f8a0b7; /* Rosa claro */
+}
+
+/* Hero Section */
+.hero {
+    background: url('img/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f8a0b7;
+}
+
+.hero .btn {
+    padding: 10px 30px;
+    background-color: #f8a0b7; /* Rosa claro */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #e64a6f; /* Rosa oscuro */
+}
+
+/* Productos Destacados */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+.productos h2 {
+    margin-top: 40px; /* Ajuste de margen para el título */
+    color: #097e8c;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    text-align: center;
+}
+
+.productos .producto-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.productos .producto-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Sobre Nosotros */
+.about {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    width: 70%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 15%;
+    justify-content: center;
+}
+
+/* Contacto */
+.contacto {
+    width: 500px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    margin-left: 35%;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto button {
+    padding: 10px 20px;
+    background-color: #f8a0b7; /* Rosa claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.contacto button:hover {
+    background-color: #e64a6f; /* Rosa oscuro */
+}
+
+/* Footer */
+footer {
+    background-color: #e64a6f; /* Rosa oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    /* Ajustes para la sección de productos en pantallas pequeñas */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Reducción del tamaño del logo en móviles */
+    header .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Ocultar el menú de navegación en dispositivos móviles */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    header .menu-icon {
+        display: block;
+        margin-top: 10px;
+    }
+
+    /* Estilos para cuando el menú esté abierto */
+    header nav ul.active {
+        display: flex;
+    }
+
+    /* Estilo de los enlaces del menú en móviles */
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos .producto-item {
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para el formulario de contacto */
+    .contacto {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .about p {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
